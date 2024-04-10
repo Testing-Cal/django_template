@@ -309,7 +309,7 @@ pipeline {
                             stage('Unit Tests') {
                                 print(list[i])
                                 // stage details here
-                                sh 'docker run -v "$WORKSPACE":/app -w /app python:3.9.5 /bin/sh unitTest.sh'
+                                sh 'docker run -v "$WORKSPACE":/app -w /app python:3.13-rc-alpine3.18 /bin/sh unitTest.sh'
                             }
                         } else if ("${list[i]}" == "'SonarQubeScan'" && env.ACTION == 'DEPLOY' && stage_flag['sonarScan']) {
                             stage('SonarQube Scan') {
