@@ -22,9 +22,10 @@ CONTEXT_PATH = os.getenv('context', '/')
 
 if CONTEXT_PATH == "/":
     urlpatterns = [
-        path('/', views.home),
+        path('', views.home),
     ]
 else:
+    CONTEXT_PATH = CONTEXT_PATH.replace('/', '')
     urlpatterns = [
         path(CONTEXT_PATH + '/', views.home),
     ]
