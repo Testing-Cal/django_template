@@ -18,12 +18,13 @@ from django.urls import path
 from context import views
 import os
 
-context = os.getenv('context', '')
-isAppend = "/"
-if context == "":
-    isAppend = ""
+CONTEXT_PATH = os.getenv('context', '/')
 
-urlpatterns = [
-    path(context+'/', views.home),
-    path(context + isAppend, views.home),
-]
+if CONTEXT_PATH == "/":
+    urlpatterns = [
+        path('/', views.home),
+    ]
+else:
+    urlpatterns = [
+        path(CONTEXT_PATH + '/', views.home),
+    ]
