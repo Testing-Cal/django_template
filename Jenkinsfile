@@ -230,7 +230,7 @@ pipeline {
                     if(metadataVars.repoName == ''){
                         metadataVars.repoName = env.RELEASE_NAME
                     }
-                    env.CONTEXT = metadataVars.contextPath.substring(1)
+                    env.CONTEXT = metadataVars.contextPath
                     env.TESTCASEREPOSITORYURL = metadataVars.testcaseRepositoryUrl
                     env.TESTCASEREPOSITORYBRANCH = metadataVars.testcaseRepositoryBranch
                     env.SOURCECODECREDENTIALID = metadataVars.sourceCodeCredentialId
