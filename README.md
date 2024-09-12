@@ -1,12 +1,2 @@
-# Django
-
-## Project setup
-```
-pip3 install --upgrade pip --user
-pip3 install -r requirements.txt
-```
-
-### Project run
-```
-python3 manage.py runserver
-```
+# Django 5.0.4
+The files in this sample template are provided for guidance purposes only. They should be customized and adapted to meet the specific requirements of your application.
